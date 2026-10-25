@@ -8,6 +8,11 @@ let offsetX = 0,
 boxbar.addEventListener("pointerdown", dragMouseDown);
 
 function dragMouseDown(e) {
+  const rect = box.getBoundingClientRect();
+  box.style.position = "absolute";
+  box.style.margin = "0";
+  box.style.left = rect.left + "px";
+  box.style.top = rect.top + "px";
   e.preventDefault();
   mouseX = e.clientX;
   mouseY = e.clientY;

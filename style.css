@@ -11,7 +11,6 @@ body {
 }
 
 header {
-    border: 1px solid brown;
     justify-content: space-evenly;
     display: flex;
     margin: 10vh 3vw;
@@ -24,6 +23,7 @@ header {
 
 main {
     margin: 10vh 9vw;
+    color: antiquewhite;
     border: 2px solid red;
     height: 80vh;
     max-height: 70vh;
@@ -32,12 +32,27 @@ main {
     justify-content: center;
 }
 
-.main-content {
-    width: 100%;
-    height: auto;
-    background-color: blue;
-    border: 2px solid blue;
+main h1 {
+    padding: 4px;
+    font-size: 50px;
+    border: 2px dotted grey;
+
 }
+
+main p {
+    font-size: 1.2rem;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
 
 
 li {
@@ -110,20 +125,19 @@ a {
     border-radius: 10px;
     height: 300px;
     width: auto;
-    position: absolute;
-    left: 1;
-    bottom: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    background: #292929;
 
 }
 
 #image_frame img {
     display: block;
     flex: 1 1 auto;
-    width: 100%;
+    width: auto;
+    padding: 5px;
     height: 274px;
+    border: 2px solid black;
 }
 
 #image_bar {
@@ -154,50 +168,57 @@ a {
 
 }
 
-#audioplayer {
+/* #audioplayer { */
+/*     position: absolute; */
+/*     top: 0; */
+/*     right: 0; */
+/*     border: 1px solid blue; */
+/*     background-color: grey; */
+/*     width: 250px; */
+/*     height: 300px; */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     justify-content: flex-start; */
+/*     align-items: center; */
+/**/
+/* } */
+
+/* .infoscrn { */
+/*     background-color: black; */
+/*     width: 80%; */
+/*     height: 25%; */
+/*     padding-bottom: 80px; */
+/* } */
+/**/
+/* .chain { */
+/*     background-color: aqua; */
+/*     flex-grow: 1; */
+/*     height: 1px; */
+/*     width: 80%; */
+/*     display: flex; */
+/*     justify-content: space-evenly; */
+/* } */
+/**/
+/* .iron-chain { */
+/*     display: flex; */
+/*     align-items: flex-start; */
+/*     width: 20px; */
+/*     height: 100%; */
+/*     overflow: hidden; */
+/*     content: url(assets/images/chain_cropped.png); */
+/* } */
+/**/
+/**/
+/**/
+/* .audio_controller { */
+/*     background-color: black; */
+/*     width: 80%; */
+/*     height: 35%; */
+/* } */
+
+.edit-tv {
     position: absolute;
-    top: 0;
-    right: 0;
-    border: 1px solid blue;
-    background-color: grey;
-    width: 250px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-
-.infoscrn {
-    background-color: black;
-    width: 80%;
-    height: 25%;
-    padding-bottom: 80px;
-}
-
-.chain {
-    background-color: aqua;
-    flex-grow: 1;
-    height: 1px;
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.iron-chain {
-    display: flex;
-    align-items: flex-start;
-    width: 20px;
-    height: 100%;
-    overflow: hidden;
-    content: url(assets/images/chain_cropped.png);
-}
-
-
-
-.audio_controller {
-    background-color: black;
-    width: 80%;
-    height: 35%;
+    top: 1;
+    left: 0;
+    padding: 20px;
 }
