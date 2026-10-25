@@ -5,15 +5,21 @@ let offsetX = 0,
   mouseX = 0,
   mouseY = 0;
 
-boxbar.addEventListener("mousedown", dragMouseDown);
+boxbar.addEventListener("pointerdown", dragMouseDown);
 
 function dragMouseDown(e) {
+  const rect = box.getBoundingClientRect();
+
+  box.style.position = "absolute";
+  box.style.margin = "0";
+  box.style.left = rect.left + "px";
+  box.style.top = rect.top + "px";
   e.preventDefault();
   mouseX = e.clientX;
   mouseY = e.clientY;
   console.log("worked");
-  document.addEventListener("mousemove", elementDrag);
-  document.addEventListener("mouseup", stopDragElement);
+  document.addEventListener("pointermove", elementDrag);
+  document.addEventListener("pointerup", stopDragElement);
 }
 function elementDrag(e) {
   e.preventDefault();
@@ -26,7 +32,7 @@ function elementDrag(e) {
   box.style.left = box.offsetLeft - offsetX + "px";
 }
 function stopDragElement() {
-  document.removeEventListener("mousemove", elementDrag);
-  document.removeEventListener("mousedown", stopDragElement);
+  document.removeEventListener("pointermove", elementDrag);
+  document.removeEventListener("pointerup", stopDragElement);
   console.log("close");
 }
