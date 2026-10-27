@@ -1,5 +1,10 @@
 # Cool Indie Portfolio Website
 
+- Just a image of Homepage
+
+![Homepage-Now](assets/Update_Images/Present.png)
+
+
 ## About
 
 This is the code for my indie website, which I created after discovering some cool websites on Neocities. I always wanted to make something cool like those, so I started working on this website. It's still incomplete, and I'm working on it!
@@ -45,3 +50,8 @@ And ofc, I don't want this to end up in some YouTube video about creepy websites
 More things are coming, of course! I can't write all of them here.
 
 Just gooooooooooooooooooooooooooooooooooooo.
+
+
+## Underwork peek
+
+![Future-page](assets/Update_Images/workundergoing.png)
