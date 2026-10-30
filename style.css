@@ -7,11 +7,14 @@
 
 /* putting gif  */
 body {
-    background-image: url("assets/images/Stars_03.gif");
+    position: relative;
+    background: url("assets/images/spiderman.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
-    justify-content: space-evenly;
+    justify-content: flex-start;
     display: flex;
     margin: 10vh 3vw;
     align-items: center;
@@ -61,17 +64,42 @@ li {
     gap: 10px;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 0 1rem 1rem 1rem;
+    /* padding: 0 1rem 1rem 1rem; */
+    padding-left: 1rem;
 }
+
+.circumplanet {
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.circumplanet:hover {
+    transform: rotate(360deg);
+    content: url(assets/memes/need-some-help-as-this-is-my-first-relationship-v0-rhyscw1uh6eh1.webp);
+}
+
 
 a {
     list-style-type: none;
-    color: antiquewhite;
     font-size: 2rem;
     font-weight: 900;
+    color: #F0F0F0;
+}
+
+a:hover {
+    color: #00E5FF;
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.5)
 }
 
 #navbar {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(8, 8, 12, 0.78);
+    border-radius: 30px;
+    padding: 2rem;
     display: flex;
 
 }
@@ -94,15 +122,7 @@ a {
     border-radius: 50%;
 }
 
-.planets {
-    border-radius: 60%;
-    transition: transform 0.5s ease-in-out;
-}
 
-.planets:hover {
-    transform: rotate(360deg);
-    content: url(assets/memes/need-some-help-as-this-is-my-first-relationship-v0-rhyscw1uh6eh1.webp);
-}
 
 #about-main {
     color: antiquewhite;
@@ -122,10 +142,12 @@ a {
 
 
 #image_frame {
+    position: absolute;
+    right: -3rem;
     border-radius: 10px;
     height: 300px;
-    width: auto;
     display: flex;
+    width: fit-content;
     flex-direction: column;
     background: #292929;
 
@@ -134,8 +156,8 @@ a {
 #image_frame img {
     display: block;
     flex: 1 1 auto;
-    width: auto;
     padding: 5px;
+    object-fit: cover;
     height: 274px;
     border: 2px solid black;
 }
@@ -215,10 +237,3 @@ a {
 /*     width: 80%; */
 /*     height: 35%; */
 /* } */
-
-.edit-tv {
-    position: absolute;
-    top: 1;
-    left: 0;
-    padding: 20px;
-}
