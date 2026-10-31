@@ -13,6 +13,20 @@
 
 }
 
+#app_frame button {
+    background-position: center;
+
+    border-radius: 100%;
+    opacity: 0;
+}
+
+#app_frame:hover button {
+
+    transition: 0.6s ease-out;
+    opacity: 0.7;
+}
+
+
 
 #frame_image img {
     display: block;
@@ -30,15 +44,19 @@
     justify-content: space-between;
     left: 0;
     width: 100%;
-    padding: 2rem;
-    opacity: 0;
-    transition: 0.6s ease-out;
+    padding: 2rem 1.2rem;
 }
 
-.imgbtn:hover {
-    opacity: 0.8;
+.appbtns {
+    border-radius: 100%;
+    background-position: center;
+    align-items: center;
 
+    box-shadow: 0px 4px 1px white,
+        inset 0px 4px 3px black;
 }
+
+
 
 
 #app_bar {
