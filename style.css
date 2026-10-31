@@ -35,7 +35,9 @@ header {
     overflow: hidden;
     box-shadow: 20px 40px 40px black,
         inset 15px 13px 30px black;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     color: white;
     align-content: center;
     text-align: center;
@@ -53,7 +55,6 @@ header {
     text-shadow: 0px 5px 15px red,
         -3px 5px 15px blue;
     text-decoration: underline;
-    padding-bottom: 3ch;
 }
 
 
@@ -66,16 +67,14 @@ header {
 
 .Btns button {
     border-radius: 80%;
-    overflow: hidden;
-    background-attachment: fixed;
-    background-size: cover;
     background-position: center;
     box-shadow: 4px 6px 10px black,
         inset -4px -6px 10px black;
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
+    height: 45px;
+    width: 45px;
+
 }
+
 
 main {
     margin: 10vh 9vw;
