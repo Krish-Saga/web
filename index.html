@@ -26,36 +26,33 @@
 
 
         <div id="spidermanface">
-
         </div>
 
-        <div id="spidermanface2">
-            <div class="musicplayer">
-                <h2>Title of the music</h2>
-                <audio src="assets/music/song_volition.ogg" controls>
-                </audio>
-                <div id="lyrics">
-                    <h1>Wow let's see how it goes</h1>
-                    <div id="ctrlBtns">
+        <div class="musicplayer">
+            <h2 id="musictitle">Title of the music</h2>
+            <audio src="assets/music/song_volition.ogg" id="song">
+            </audio>
+            <div id="lyrics">
+                <h1>Lyrics</h1>
 
-                        <div id="playPrvs" class="Btns">
-                            <button type="button"><img src="assets/Icons/play-track-prev.svg" alt="PlayPrevious-Icon">
-                            </button>
-                        </div>
-                        <div id="playBtn" class="Btns">
-                            <button type="button"><img src="assets/Icons/play-button.svg" alt="Play-Icon"> </button>
-                        </div>
-                        <div id="playNext" class="Btns">
-                            <button type="button"><img src="assets/Icons/play-track-next.svg" alt="PlayNext-Icon">
-                            </button>
-                        </div>
+            </div>
+            <div id="ctrlBtns">
 
-                    </div>
-
+                <div id="playPrvs" class="Btns">
+                    <button type="button"><img src="assets/Icons/play-track-prev.svg" alt="PlayPrevious-Icon">
+                    </button>
+                </div>
+                <div id="playBtn" class="Btns">
+                    <button type="button"><img src="assets/Icons/play-button.svg" alt="Play-Icon"> </button>
+                </div>
+                <div id="playNext" class="Btns">
+                    <button type="button"><img src="assets/Icons/play-track-next.svg" alt="PlayNext-Icon">
+                    </button>
                 </div>
 
             </div>
-        </div>
+
+
     </header>
 
     <div id="app_frame">
@@ -69,30 +66,11 @@
             </div>
         </div>
         <div class="frame_image">
-            <img src="assets/pfp/me.gif" alt="chill">
+            <img src="assets/pfp/me.gif" alt="Me.gif">
         </div>
 
     </div>
 
-    <div id="audioplayer">
-        <div class="chain">
-            <span class="iron-chain"></span>
-            <span class="iron-chain"></span>
-        </div>
-        <div class="infoscrn">
-        </div>
-        <div class="chain">
-            <span class="iron-chain"></span>
-            <span class="iron-chain"></span>
-        </div>
-        <div class="audio_controller">
-
-        </div>
-        <audio>
-            <source src="assets/music/song_volition.ogg">
-            For some reason your browser doesn't support this
-        </audio>
-    </div>
     <main>
         <div class="main-content">
 
@@ -120,6 +98,8 @@
     </main>
     <footer></footer>
     <script src="app.js" defer>
+    </script>
+    <script src="assets/extra_code/musicplayer.js" defer>
     </script>
 </body>
 

@@ -31,11 +31,10 @@ header {
     height: auto;
 }
 
-#spidermanface2 {
+.musicplayer {
     overflow: hidden;
     box-shadow: 20px 40px 40px black,
         inset 15px 13px 30px black;
-
     display: block;
     color: white;
     align-content: center;
@@ -50,11 +49,19 @@ header {
     flex-grow: 1;
 }
 
+#musictitle {
+    text-shadow: 0px 5px 15px red,
+        -3px 5px 15px blue;
+    text-decoration: underline;
+    padding-bottom: 3ch;
+}
+
+
 #ctrlBtns {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 2em 0 2em;
+    margin: 0 2em;
 }
 
 .Btns button {
