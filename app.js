@@ -1,5 +1,5 @@
-boxbar = document.getElementById("image_bar");
-box = document.getElementById("image_frame");
+boxbar = document.getElementById("app_bar");
+box = document.getElementById("app_frame");
 let offsetX = 0,
     offsetY = 0,
     mouseX = 0,
@@ -27,3 +27,5 @@ function stopDragElement() {
     document.removeEventListener("pointermove", elementDrag);
     document.removeEventListener("pointerup", stopDragElement);
 }
+
+// Adding Goon mode Later 
