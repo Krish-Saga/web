@@ -8,6 +8,9 @@
 body {
     position: relative;
     background-image: url("assets/images/spiderman.png");
+    border: 1px solid;
+    width: 100vw;
+    backdrop-filter: brightness(50%);
     background-size: cover;
     background-attachment: fixed;
 
@@ -30,21 +33,41 @@ header {
 
 #spidermanface2 {
     overflow: hidden;
-    box-shadow: 20px 40px 30px black,
-        inset 0px 30px 40px black;
+    box-shadow: 20px 40px 40px black,
+        inset 15px 13px 30px black;
 
-    display: flex;
-
-    justify-content: center;
+    display: block;
+    color: white;
+    align-content: center;
+    text-align: center;
     /* color: #241A1B; */
-    color: grey;
-    font-weight: 900;
-    font-size: 2rem;
-    text-shadow: 3px 5px 1px #5B5C5E;
-    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-shadow: 5px 8px 10px black;
+    border-radius: 10px;
     width: 350px;
     max-height: 100%;
     flex-grow: 1;
+}
+
+#ctrlBtns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 2em 0 2em;
+}
+
+.Btns button {
+    border-radius: 80%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 4px 6px 10px black,
+        inset -4px -6px 10px black;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
 }
 
 main {
@@ -117,10 +140,10 @@ a:hover {
 }
 
 #navbar {
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4),
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2),
         0 1px 3px rgba(0, 0, 0, 0.6),
         inset 0 1px 1px rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(8, 8, 12, 0.78);
     border-radius: 30px;
