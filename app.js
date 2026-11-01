@@ -29,3 +29,16 @@ function stopDragElement() {
 }
 
 // Adding Goon mode Later 
+
+// ==========================================
+// Appframe Image changer 
+// ==========================================
+const framebtn = document.getElementById("framebtn")
+const frameimg = document.querySelector("#frame_image img");
+
+framebtn.addEventListener("click", slideimg);
+function slideimg() {
+    frameimg.src = "assets/memes/goon.gif"
+    console(" IT detected me");
+
+}

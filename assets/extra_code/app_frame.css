@@ -16,13 +16,13 @@
 #app_frame button {
     background-position: center;
 
+    transition: 0.4s ease-out;
     border-radius: 100%;
     opacity: 0;
 }
 
 #app_frame:hover button {
 
-    transition: 0.6s ease-out;
     opacity: 0.7;
 }
 
@@ -37,6 +37,8 @@
     border: 2px solid black;
 }
 
+
+
 .imgbtn {
     position: absolute;
     bottom: 0;
@@ -45,13 +47,12 @@
     left: 0;
     width: 100%;
     padding: 2rem 1.2rem;
+
 }
 
 .appbtns {
     border-radius: 100%;
     background-position: center;
-    align-items: center;
-
     box-shadow: 0px 4px 1px white,
         inset 0px 4px 3px black;
 }
