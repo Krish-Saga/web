@@ -35,6 +35,7 @@ function stopDragElement() {
 // ==========================================
 const framebtn = document.querySelectorAll(".appbtns");
 const frameimg = document.querySelector("#frame_image img");
+const appname = document.querySelector(".app-name")
 
 framebtn.forEach((button) => {
 
@@ -44,10 +45,12 @@ function slideimg() {
     console.log("hm got it");
     if (frameimg.classList.contains("1")) {
         frameimg.src = "assets/memes/sory_pika.jpg";
+        appname.textContent = "Pika_Pika.pika";
         frameimg.classList.add("2");
         frameimg.classList.remove("1");
     } else {
         frameimg.src = "assets/pfp/me.gif";
+        appname.textContent = "Me.png";
         frameimg.classList.add("1");
         frameimg.classList.remove("2");
 

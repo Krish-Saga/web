@@ -5,6 +5,7 @@ const plysong = document.getElementById("plysong");
 const plynxt = document.getElementById("plynxt");
 const plyprvs = document.getElementById("plyprvs");
 const sidebtns = document.querySelectorAll(".ctrl-Btns")
+const appname = document.querySelector(".app-name")
 sidebtns.forEach((sidebtns) => {
     sidebtns.addEventListener("click", songChng);
 });
@@ -16,20 +17,23 @@ function songSt() {
         playBtn.classList.add("on");
         playBtn.classList.remove("off");
         appimg.src = "assets/memes/goon.gif";
+        appname.textContent = "gooner.goon";
         plysong.src = "assets/Icons/play-pause.svg"
     } else {
         song.pause()
         playBtn.classList.add("off");
         playBtn.classList.remove("on")
         appimg.src = "assets/pfp/me.gif"
+        appname.textContent = "Me.gif"
         plysong.src = "assets/Icons/play-button.svg"
     }
 
 };
 function songChng() {
     if (song.classList.contains("1st")) {
-        song.src = "assets/music/song_volition.ogg";
+        song.src = "assets/music/alone.mp3";
         appimg.src = "assets/memes/eatchips.jpg"
+        appname.textContent = "Chips.lol";
         song.play();
         song.classList.add("2nd");
         song.classList.remove("1st");
@@ -44,8 +48,9 @@ function songChng() {
     } else {
         song.src = "assets/music/Diet_mountain_dew.mp3";
         appimg.src = "assets/memes/goon.gif";
+        appname.textContent = "gooner.goon";
         song.play();
-        plysong.src = "assets/Icons/play-pause.svg"
+        plysong.src = "assets/Icons/play-pause.svg";
         song.classList.add("1st");
         song.classList.remove("2nd");
 

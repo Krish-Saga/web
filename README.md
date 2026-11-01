@@ -27,6 +27,8 @@ And yeah, it's still in its early days.
 
 1. Try hovering over the globe.
 2. You can move the image. There'll be something cool related to it in future updates.
+3.Try hovering hover everything 
+4.Make sure to hit every button some won't work cuz I will add things on them later
 3. I've thought of a lot more Easter eggs that I'll add in future updates. I'll update this section as soon as I implement them.
 
 ## License
@@ -52,6 +54,21 @@ More things are coming, of course! I can't write all of them here.
 Just gooooooooooooooooooooooooooooooooooooo.
 
 
+
 ## Underwork peek
 
-![Future-page](assets/Update_Images/workundergoing.png)
+- Well will update as soon as I update new work on here
+
+
+## Past Version to track how much it changed from past.
+- Base1
+![Base1](assets/Update_Images/Past.png)
+
+- Base2
+
+![Base2](assets/Update_Images/Base2.png)
+
+- Base2
+
+![Base3](assets/Update_Images/Base3.png)
+
