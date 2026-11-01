@@ -15,15 +15,13 @@
 
 #app_frame button {
     background-position: center;
-
     transition: 0.4s ease-out;
-    border-radius: 100%;
     opacity: 0;
 }
 
 #app_frame:hover button {
 
-    opacity: 0.7;
+    opacity: 1;
 }
 
 
@@ -51,10 +49,21 @@
 }
 
 .appbtns {
-    border-radius: 100%;
-    background-position: center;
-    box-shadow: 0px 4px 1px white,
-        inset 0px 4px 3px black;
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    background: transparent;
+    box-shadow: -5px -4px 10px black,
+        inset -4px -4px 5px black;
+}
+
+.appicons {
+    width: 16px;
+    height: 16px;
 }
 
 

@@ -33,12 +33,24 @@ function stopDragElement() {
 // ==========================================
 // Appframe Image changer 
 // ==========================================
-const framebtn = document.getElementById("framebtn")
+const framebtn = document.querySelectorAll(".appbtns");
 const frameimg = document.querySelector("#frame_image img");
 
-framebtn.addEventListener("click", slideimg);
+framebtn.forEach((button) => {
+
+    button.addEventListener("click", slideimg);
+});
 function slideimg() {
-    frameimg.src = "assets/memes/goon.gif"
-    console(" IT detected me");
+    console.log("hm got it");
+    if (frameimg.classList.contains("1")) {
+        frameimg.src = "assets/memes/sory_pika.jpg";
+        frameimg.classList.add("2");
+        frameimg.classList.remove("1");
+    } else {
+        frameimg.src = "assets/pfp/me.gif";
+        frameimg.classList.add("1");
+        frameimg.classList.remove("2");
+
+    }
 
 }

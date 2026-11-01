@@ -11,7 +11,7 @@ function songSt() {
         song.play();
         playBtn.classList.add("on");
         playBtn.classList.remove("off");
-        appimg.src = "assets/memes/onepunchman.gif";
+        appimg.src = "assets/memes/goon.gif";
         plysong.src = "assets/Icons/play-pause.svg"
     } else {
         song.pause()
