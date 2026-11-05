@@ -38,7 +38,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    color: white;
+    color: #FFFBF1;
     align-content: center;
     text-align: center;
     /* color: #241A1B; */
@@ -49,9 +49,12 @@ header {
     width: 350px;
     max-height: 100%;
     flex-grow: 1;
+    position: relative;
 }
 
+
 .musicplayer button {
+    backdrop-filter: blur(40%);
     opacity: 0;
     transition: 0.3s ease-in;
     cursor: pointer;
@@ -195,22 +198,4 @@ a:hover {
     padding: 2rem;
     display: flex;
 
-}
-
-
-
-
-#about-main {
-    color: antiquewhite;
-    padding: 30px;
-    font-size: 40px;
-    font-weight: 10000;
-}
-
-#about-main>p {
-    padding: 80px;
-}
-
-#about-main>img {
-    padding-left: 50px;
 }

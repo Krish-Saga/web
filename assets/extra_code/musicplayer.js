@@ -1,30 +1,51 @@
 const playBtn = document.getElementById("playBtn");
+const frame = document.getElementById("frame_image")
+const msplayer = document.getElementsByClassName("musicplayer");
 const appimg = document.querySelector("#frame_image img");
 const song = document.getElementById("song");
 const plysong = document.getElementById("plysong");
 const plynxt = document.getElementById("plynxt");
 const plyprvs = document.getElementById("plyprvs");
-const sidebtns = document.querySelectorAll(".ctrl-Btns")
-const appname = document.querySelector(".app-name")
+const sidebtns = document.querySelectorAll(".ctrl-Btns");
+const appname = document.querySelector(".app-name");
+const songtitle = document.getElementById("song-title");
+const appvid = document.createElement("video")
+
+
+async function songdata() {
+    try {
+        const response = await fetch("assets/playlist.json");
+        const data = await response.json();
+        return data;
+    } catch (e) {
+
+        console.error("Failed to fulfill my job (loading json)", e);
+
+    }
+}
+
 sidebtns.forEach((sidebtns) => {
     sidebtns.addEventListener("click", songChng);
 });
-playBtn.addEventListener("click", songSt);
 
-function songSt() {
+playBtn.addEventListener("click", async () => {
+    const sdata = await songdata();
+    songSt(sdata);
+});
+
+function songSt(songdata) {
+    var index = 3;
     if (playBtn.classList.contains("off")) {
+        songtitle.textContent = songdata.songs[index].title;
+        song.src = encodeURI("assets/" + songdata.songs[index].audio);
+        appimg.src = encodeURI("assets/gif/" + songdata.songs[index].gif);
+        appname.textContent = songdata.songs[index].artist;
         song.play();
-        playBtn.classList.add("on");
-        playBtn.classList.remove("off");
-        appimg.src = "assets/memes/goon.gif";
-        appname.textContent = "gooner.goon";
+        playBtn.classList.replace("off", "on");
         plysong.src = "assets/Icons/play-pause.svg"
     } else {
         song.pause()
-        playBtn.classList.add("off");
-        playBtn.classList.remove("on")
-        appimg.src = "assets/pfp/me.gif"
-        appname.textContent = "Me.gif"
+        playBtn.classList.replace("on", "off");
         plysong.src = "assets/Icons/play-button.svg"
     }
 
@@ -62,3 +83,4 @@ function songChng() {
     }
 
 }
+
