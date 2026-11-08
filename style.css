@@ -11,9 +11,14 @@
     width: 150px;
     z-index: 998;
     height: auto;
-
     transform: translate(20%, -50%);
-    animation: corner-shake 0.3s linear 3s 20;
+}
+
+#phone:hover {
+
+    animation: corner-shake 0.3s linear infinite;
+
+
 }
 
 /* putting gif  */
@@ -233,6 +238,7 @@ a:hover {
 }
 
 #navbar {
+    font-family: 'Caveat', cursive;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2),
         0 1px 3px rgba(0, 0, 0, 0.6),
         inset 0 1px 1px rgba(255, 255, 255, 0.12);

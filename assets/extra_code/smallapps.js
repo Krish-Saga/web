@@ -26,7 +26,7 @@ async function songdata() {
 
     }
 }
-function playsong(index, sdata) {
+async function playsong(index, sdata) {
 
     if (song.paused) {
         song.play();
