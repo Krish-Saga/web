@@ -104,3 +104,11 @@ Here's a look at how the website has changed over time. You can compare the prev
 ### Base 4
 
 ![Base4](assets/Update_Images/Base4.png)
+
+### Base 5
+
+![Base5](assets/Update_Images/Base5.png)
+
+### Base 6
+
+![Base6](assets/Update_Images/Base6.png)
