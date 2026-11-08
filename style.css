@@ -10,7 +10,6 @@ body {
     background-image: url("assets/images/spiderman.png");
     border: 1px solid;
     width: 100vw;
-    backdrop-filter: brightness(50%);
     background-size: cover;
     background-attachment: fixed;
 
@@ -18,37 +17,36 @@ body {
 }
 
 header {
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    backdrop-filter: brightness(40%);
+    border-radius: 10px;
     display: flex;
     margin: 10vh 3vw;
-    /* align-items: center; */
+    align-items: center;
     min-height: max-content;
     width: auto;
 }
 
-#spidermanface {
-    width: 350px;
-    height: auto;
-}
 
 .musicplayer {
-    overflow: hidden;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 0.5px;
+    padding: 20px;
+    transform: rotate(9deg);
     box-shadow: 20px 20px 10px black,
         inset 10px 13px 30px black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     color: #FFFBF1;
+    border: 2px solid white;
     align-content: center;
+    display: inline-block;
+    position: relative;
     text-align: center;
-    /* color: #241A1B; */
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-weight: 400;
     text-shadow: 5px 8px 10px black;
     border-radius: 10px;
-    width: 350px;
+    width: 450px;
     max-height: 100%;
-    flex-grow: 1;
     position: relative;
 }
 
@@ -118,20 +116,13 @@ header {
 
 
 
-main {
-    margin: 10vh 9vw;
-    color: antiquewhite;
-    height: 80vh;
-    max-height: 70vh;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-}
 
 main h1 {
     padding: 4px;
-    font-size: 50px;
-    border: 2px dotted grey;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -139,12 +130,27 @@ main p {
     font-size: 1.2rem;
 }
 
-.main-content {
-    display: flex;
+main {
     justify-content: center;
+    display: flex;
+
+
+}
+
+.main-content {
+
+    backdrop-filter: brightness(30%);
+    color: antiquewhite;
+    height: 80vh;
+    max-height: 70vh;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 2px solid white;
     align-items: center;
     letter-spacing: 3px;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
 
 }
 
@@ -198,4 +204,13 @@ a:hover {
     padding: 2rem;
     display: flex;
 
+}
+
+#songtitle-div {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 7px;
+    background-color: #0D1217;
+    color: #E5EDF5;
 }

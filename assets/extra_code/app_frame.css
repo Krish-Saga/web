@@ -1,5 +1,6 @@
 #app_frame {
     position: absolute;
+    z-index: 999;
     right: 1rem;
     border-radius: 10px;
     height: 300px;

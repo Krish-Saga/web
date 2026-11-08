@@ -11,6 +11,8 @@ const appname = document.querySelector(".app-name");
 const songtitle = document.getElementById("song-title");
 const leftframe = document.getElementById("left-frame");
 const rightframe = document.getElementById("right-frame");
+const appframeclose = document.getElementById("close-app-frame");
+const appframe = document.getElementById("app_frame");
 
 
 async function songdata() {
@@ -66,15 +68,6 @@ async function imgdata() {
     }
 }
 
-
-
-
-
-
-
-
-
-
 // ================= Main Function 
 async function main() {
     var songindex = 0;
@@ -104,6 +97,7 @@ async function main() {
     rightframe.addEventListener("click", () => {
         imgindex = (imgindex + 1) % appimages.images.length;
         appimg.src = encodeURI("assets/" + appimages.images[imgindex].image)
+        appname.textContent = appimages.images[imgindex].appname;
 
     })
 
@@ -113,6 +107,10 @@ async function main() {
             imgindex = appimages.images.length - 1;
         }
         appimg.src = encodeURI("assets/" + appimages.images[imgindex].image);
+        appname.textContent = appimages.images[imgindex].appname;
+    })
+    appframeclose.addEventListener("click", () => {
+        appframe.remove();
     })
 
 }
