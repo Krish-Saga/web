@@ -68,6 +68,7 @@ async function imgdata() {
     }
 }
 
+
 // ================= Main Function 
 async function main() {
     var songindex = 0;
@@ -114,5 +115,10 @@ async function main() {
     })
 
 }
+
+
+//============== Easter Egg phone ==================
+
+
 
 main();

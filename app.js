@@ -28,31 +28,4 @@ function stopDragElement() {
     document.removeEventListener("pointerup", stopDragElement);
 }
 
-// Adding Goon mode Later 
 
-// ==========================================
-// Appframe Image changer 
-// ==========================================
-const framebtn = document.querySelectorAll(".appbtns");
-const frameimg = document.querySelector("#frame_image img");
-const appName = document.querySelector(".app-name")
-
-console.log(framebtn);
-framebtn.forEach((button) => {
-    button.addEventListener("click", slideimg);
-});
-function slideimg() {
-    if (frameimg.classList.contains("1")) {
-        frameimg.src = "assets/memes/sory_pika.jpg";
-        appName.textContent = "Pika_Pika.pika";
-        frameimg.classList.add("2");
-        frameimg.classList.remove("1");
-    } else {
-        frameimg.src = "assets/pfp/me.gif";
-        appName.textContent = "Me.png";
-        frameimg.classList.add("1");
-        frameimg.classList.remove("2");
-
-    }
-
-}
