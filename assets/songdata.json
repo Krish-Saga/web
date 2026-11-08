@@ -1,0 +1,68 @@
+{
+    "music": [
+        {
+            "title": "If You See Me Use Ubuntu (Song Parody)",
+            "appname": "ArchUser.gif",
+            "duration": 98,
+            "audio": "music/002 - If You See Me Use Ubuntu (Song Parody).mp3",
+            "subtitle": "music/002 - If You See Me Use Ubuntu (Song Parody).en-orig.vtt",
+            "gif": "gif/Shark Zzz.gif"
+        },
+        {
+            "title": "The Winner Takes It All",
+            "appname": "Berserk.gif",
+            "duration": 327,
+            "audio": "music/008 - ABBA - The Winner Takes It All - slowed + reverb, to PERFECTION.mp3",
+            "gif": "gif/winner_takes_all.gif"
+        },
+        {
+            "title": "Be My Baby",
+            "appname": "Baka.gif",
+            "duration": 165,
+            "audio": "music/009 - The Ronettes - Be My Baby.mp3",
+            "gif": "gif/be_my_baby.gif"
+        },
+        {
+            "title": "JAMAL KUDU",
+            "appname": "Persian.gif",
+            "duration": 133,
+            "audio": "music/004 - ANIMAL： ABRAR’S ENTRY - JAMAL KUDU(Full Video) ｜Ranbir Kapoor,Bobby Deol ｜Sandeep Vanga ｜Bhushan K.mp3",
+            "gif": "gif/jamal_kudu.gif"
+        },
+        {
+            "title": " ✨- \"Shubhaarambh\"",
+            "appname": "bounce ✨.gif",
+            "duration": 51,
+            "audio": "music/014 - Navratri Special✨- ＂Shubhaarambh＂ MEP [Amv⧸Edit] Vibey!💃Ft. @INS4NE_MY ,@Nicolas0zid.mp3",
+            "gif": "gif/navratri.gif"
+        },
+        {
+            "title": "Belisarius - Epic Byzantine Music",
+            "appname": "Belisarius.gif",
+            "duration": 431,
+            "audio": "music/003 - Belisarius - Epic Byzantine Music.mp3",
+            "gif": "gif/byzantine-belisarius.gif"
+        },
+        {
+            "title": "lana del rey - diet mountain dew (demo) {slowed/reverb}",
+            "appname": "Goon.gooner",
+            "duration": 258,
+            "audio": "music/010 - lana del rey - diet mountain dew (demo) {slowed⧸reverb}.mp3",
+            "gif": "gif/goon.gif"
+        },
+        {
+            "title": "𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡.",
+            "appname": "𝐿𝑢𝑒𝑢𝑟.  ॐ",
+            "duration": 140,
+            "audio": "music/001 - 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡.mp3",
+            "gif": "gif/try_again.gif"
+        },
+        {
+            "title": "Army Dreamers (2018 Remaster)",
+            "appname": "Kate Bush",
+            "duration": 179,
+            "audio": "music/002 - Army Dreamers (2018 Remaster).mp3",
+            "gif": "gif/army_dreamers.jpg"
+        }
+    ]
+}
