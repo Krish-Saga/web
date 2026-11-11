@@ -11,7 +11,7 @@
     width: 150px;
     z-index: 998;
     height: auto;
-    transform: translate(20%, -50%);
+    transform: translate(10%, -50%);
 }
 
 #phone:hover {
@@ -23,7 +23,7 @@
 
 /* putting gif  */
 body {
-
+    font-family: 'Pixelify Sans', sans-serif;
     backdrop-filter: brightness(30%);
     position: relative;
     background-image: url("assets/images/spiderman.png");
@@ -64,9 +64,9 @@ body {
 }
 
 header {
+    border: 2px solid white;
+    position: relative;
     justify-content: space-between;
-
-    backdrop-filter: brightness(40%);
     border-radius: 10px;
     display: flex;
     margin: 10vh 3vw;
@@ -75,9 +75,28 @@ header {
     width: auto;
 }
 
+#sub-display {
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 300px;
+    color: ghostwhite;
+    text-shadow: 5px 5px 3px black;
+    font-size: 1.8rem;
+    background: transparent;
+    border-radius: 10px;
+}
+
 
 .musicplayer {
-    font-family: 'Caveat', cursive;
     letter-spacing: 0.5px;
     padding: 20px;
     transform: rotate(9deg);
@@ -159,23 +178,23 @@ header {
 
 
 
-main h1 {
-    position: relative;
-    background: transparent;
+#main-head {
     color: antiquewhite;
     padding: 4px;
     border: 2px solid white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-color: darkslategrey;
+    overflow: hidden;
 
 }
 
 #b2>img {
     width: auto;
     height: 40px;
-    transform: scale(4);
+    transform: scale(5);
     padding: 5px;
 }
 
@@ -201,9 +220,9 @@ main {
 
 }
 
-main h1 img {
+#main-head img {
     width: auto;
-    height: 31px;
+    height: 41px;
     object-fit: cover;
     position: absolute;
     left: 0;
@@ -221,7 +240,7 @@ main h1 img {
     border: 2px solid white;
     align-items: center;
     letter-spacing: 3px;
-    font-family: 'Pixelify Sans', sans-serif;
+
     font-style: normal;
 
     border-radius: 5px;
@@ -268,7 +287,7 @@ a:hover {
 }
 
 #navbar {
-    font-family: 'Caveat', cursive;
+
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2),
         0 1px 3px rgba(0, 0, 0, 0.6),
         inset 0 1px 1px rgba(255, 255, 255, 0.12);

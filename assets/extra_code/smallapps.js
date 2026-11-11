@@ -13,6 +13,8 @@ const leftframe = document.getElementById("left-frame");
 const rightframe = document.getElementById("right-frame");
 const appframeclose = document.getElementById("close-app-frame");
 const appframe = document.getElementById("app_frame");
+const subtrack = document.getElementById("caption-track").track;
+const subtitle = document.querySelector("#sub-display p")
 
 
 async function songdata() {
@@ -26,14 +28,30 @@ async function songdata() {
 
     }
 }
+
 async function playsong(index, sdata) {
 
+    subtrack.mode = 'hidden';
+
+    await subtrack.addEventListener("cuechange", () => {
+        const activeCue = subtrack.activeCues?.[0];
+        if (activeCue) {
+            subtitle.replaceChildren(activeCue.getCueAsHTML());
+        } else {
+            subtitle.replaceChildren();
+        }
+    })
+
     if (song.paused) {
+
         song.play();
         plysong.src = "assets/Icons/play-pause.svg"
         appimg.src = encodeURI("assets/" + sdata.music[index].gif);
         songtitle.textContent = sdata.music[index].title;
         appname.textContent = sdata.music[index].appname;
+        console.log(index)
+
+
     } else {
         appimg.src = "assets/pfp/me.gif"
         appname.textContent = "Me.png"
