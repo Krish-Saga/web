@@ -15,6 +15,7 @@
 }
 
 #app_frame button {
+    cursor: pointer;
     background-position: center;
     transition: 0.4s ease-out;
     opacity: 0;

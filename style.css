@@ -43,27 +43,27 @@ body {
 
 @keyframes corner-shake {
     0% {
-        transform: translate(30%, -50%) rotate(0deg);
+        transform: translate(-20%, -50%) rotate(0deg);
     }
 
     20% {
-        transform: translate(calc(30% - 4px), calc(-50% + 2px)) rotate(-3deg);
+        transform: translate(calc(-20% - 4px), calc(-50% + 2px)) rotate(-3deg);
     }
 
     40% {
-        transform: translate(calc(30% + 3px), calc(-50% - 3px)) rotate(3deg);
+        transform: translate(calc(-20% + 3px), calc(-50% - 3px)) rotate(3deg);
     }
 
     60% {
-        transform: translate(calc(30% - 3px), calc(-50% - 1px)) rotate(-2deg);
+        transform: translate(calc(-20% - 3px), calc(-50% - 1px)) rotate(-2deg);
     }
 
     80% {
-        transform: translate(calc(30% + 2px), calc(-50% + 3px)) rotate(2deg);
+        transform: translate(calc(-20% + 2px), calc(-50% + 3px)) rotate(2deg);
     }
 
     100% {
-        transform: translate(30%, -50%) rotate(0deg);
+        transform: translate(-20%, -50%) rotate(0deg);
     }
 
 }
