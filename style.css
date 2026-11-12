@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#yummy:hover {
+    content: url(assets/gif/yummy.gif);
+    box-shadow: 10px 10px 8px grey, inset 10px 10px 8px grey;
+}
+
 #phone {
     position: absolute;
     right: 0;
@@ -64,7 +69,7 @@ body {
 }
 
 header {
-    border: 2px solid white;
+    border: 2px solid red;
     position: relative;
     justify-content: space-between;
     border-radius: 10px;
@@ -78,22 +83,24 @@ header {
 #sub-display {
     font-weight: bold;
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
     position: absolute;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 200px;
-    width: 300px;
+    top: 0;
+    left: 0;
+    line-height: 1.9;
+    transform: translate(0%, -95%);
+    height: auto;
+    width: fit-content;
+    text-decoration: underline;
     color: ghostwhite;
-    text-shadow: 5px 5px 3px black;
-    font-size: 1.8rem;
-    background: transparent;
+    text-shadow: 5px 5px 3px grey;
+    font-size: 2rem;
     border-radius: 10px;
+    white-space: nowrap;
+
+    -webkit-text-stroke: 1px black;
 }
+
 
 
 .musicplayer {
@@ -113,20 +120,13 @@ header {
     border-radius: 10px;
     width: 450px;
     max-height: 100%;
-    position: relative;
 }
 
 
 .musicplayer button {
-    backdrop-filter: blur(40%);
-    opacity: 0;
-    transition: 0.3s ease-in;
     cursor: pointer;
 }
 
-.musicplayer:hover button {
-    opacity: 1;
-}
 
 
 
@@ -300,7 +300,7 @@ a:hover {
 }
 
 #songtitle-div {
-    margin: 10px;
+    margin: 0 10px 25px 10px;
     box-shadow: 5px 5px 5px grey;
     padding: 10px;
     border: 2px solid white;
