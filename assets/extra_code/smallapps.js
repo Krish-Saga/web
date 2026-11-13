@@ -29,6 +29,39 @@ async function songdata() {
 
     }
 }
+async function visualnovelst() {
+    const dialoguescrn = document.createElement("div");
+    const dialoguebox = document.createElement("div");
+    dialoguescrn.style.cssText = `
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px)brightness(50%);
+        z-index: 9999;
+    `;
+    dialoguebox.style.cssText = `
+    z-index: 10000;
+    width: 68vw;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    `
+    document.body.style.overflow = "hidden";
+    dialoguescrn.appendChild(dialoguebox)
+    document.documentElement.append(dialoguescrn);
+}
+async function visualnovelend() {
+    dialoguebox.remove();
+    dialoguescrn.remove();
+    document.body.style.overflow = "";
+
+}
 
 async function playsong(index, sdata) {
 
@@ -136,9 +169,9 @@ async function main() {
     kakashi.addEventListener("mouseenter", () => {
         appimg.src = "assets/gif/kkshi_fight.gif";
 
+
     })
     kakashi.addEventListener("mouseleave", () => {
-
         appimg.src = "assets/pfp/me.gif";
     })
 

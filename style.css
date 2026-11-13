@@ -239,7 +239,6 @@ main {
     font-size: 2rem;
     flex: 1;
     background: url(assets/images/star.gif);
-
 }
 
 #main-head img {
@@ -255,16 +254,12 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    backdrop-filter: brightness(30%);
     color: antiquewhite;
     height: 80vh;
     width: 70%;
-    white-space: nowrap;
     border: 2px solid white;
     align-items: center;
     letter-spacing: 3px;
-
-    font-style: normal;
 
     border-radius: 5px;
 
