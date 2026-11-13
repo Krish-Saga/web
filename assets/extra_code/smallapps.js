@@ -14,7 +14,8 @@ const rightframe = document.getElementById("right-frame");
 const appframeclose = document.getElementById("close-app-frame");
 const appframe = document.getElementById("app_frame");
 const subtrack = document.getElementById("caption-track").track;
-const subtitle = document.querySelector("#sub-display p")
+const subtitle = document.querySelector("#sub-display p");
+const kakashi = document.getElementById("kakashi");
 
 
 async function songdata() {
@@ -130,6 +131,15 @@ async function main() {
     })
     appframeclose.addEventListener("click", () => {
         appframe.remove();
+    })
+    // =============== Kakashi image hover logic ==============
+    kakashi.addEventListener("mouseenter", () => {
+        appimg.src = "assets/gif/kkshi_fight.gif";
+
+    })
+    kakashi.addEventListener("mouseleave", () => {
+
+        appimg.src = "assets/pfp/me.gif";
     })
 
 }
