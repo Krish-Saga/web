@@ -96,7 +96,7 @@ header {
     border-radius: 10px;
     white-space: nowrap;
 
-    -webkit-text-stroke: 1px black;
+    --webkit-text-stroke: 1px black;
 }
 
 #kakashi {

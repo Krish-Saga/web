@@ -32,29 +32,48 @@ async function songdata() {
 async function visualnovelst() {
     const dialoguescrn = document.createElement("div");
     const dialoguebox = document.createElement("div");
+    const character = document.createElement("h1");
+    const dialogue = document.createElement("p");
+    dialogue.textContent = "Hello ! Anon UWU >_<.";
+    character.textContent = "Jenny";
+    character.style.cssText = `
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    font-size: 4rem;
+    font-weight: 400;
+    --webkit-text-stroke: 1px black;
+    position:absolute;
+    top: -2rem;
+    left: 4rem;
+   `;
+    dialogue.style.cssText = `
+    padding: 60px 100px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    font-size: 2.6rem;
+    `;
     dialoguescrn.style.cssText = `
         position: fixed;
         inset: 0;
         width: 100vw;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px)brightness(50%);
+        backdrop-filter: blur(5px);
         z-index: 9999;
     `;
     dialoguebox.style.cssText = `
     z-index: 10000;
-    width: 68vw;
+    width: 100vw;
     height: 200px;
     border-radius: 10px;
-    border: 2px solid white;
+    background: rgba(0,0,0,0.4);
     position: absolute;
+    box-shadow: inset 0px 20px 20px black;
     bottom: 0;
-    right: 0;
-
     `
     document.body.style.overflow = "hidden";
     dialoguescrn.appendChild(dialoguebox)
-    document.documentElement.append(dialoguescrn);
+    dialoguebox.append(character, dialogue);
+    document.documentElement.appendChild(dialoguescrn);
 }
 async function visualnovelend() {
     dialoguebox.remove();
@@ -77,7 +96,6 @@ async function playsong(index, sdata) {
     })
 
     if (song.paused) {
-
         song.play();
         plysong.src = "assets/Icons/play-pause.svg"
         appimg.src = encodeURI("assets/" + sdata.music[index].gif);
@@ -123,6 +141,7 @@ async function imgdata() {
 
 // ================= Main Function 
 async function main() {
+    await visualnovelst();
     var songindex = 0;
     var imgindex = 0;
     const sdata = await songdata();
