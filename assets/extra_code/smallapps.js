@@ -41,6 +41,9 @@ function typewriter(typed, dialoguetext) {
     }
 }
 async function visualnovelst() {
+
+    const uwu = new Audio("assets/music/uwu_onichan.mp3")
+    uwu.play();
     const ascii = document.createElement("pre");
     const dialoguescrn = document.createElement("div");
     const dialoguebox = document.createElement("div");
