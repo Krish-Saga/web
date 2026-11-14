@@ -16,6 +16,7 @@ const appframe = document.getElementById("app_frame");
 const subtrack = document.getElementById("caption-track").track;
 const subtitle = document.querySelector("#sub-display p");
 const kakashi = document.getElementById("kakashi");
+const dialogue = document.createElement("pre");
 
 
 async function songdata() {
@@ -29,20 +30,33 @@ async function songdata() {
 
     }
 }
+function typewriter(typed, dialoguetext) {
+    if (typed < dialoguetext.length) {
+        dialogue.textContent += dialoguetext[typed];
+        typed++;
+        setTimeout(() => {
+            typewriter(typed, dialoguetext)
+        }, 50);
+
+    }
+}
 async function visualnovelst() {
     const ascii = document.createElement("pre");
     const dialoguescrn = document.createElement("div");
     const dialoguebox = document.createElement("div");
     const character = document.createElement("h1");
-    const dialogue = document.createElement("pre");
     const stbtn = document.getElementById("novel");
-    dialogue.textContent = `
+    dialogue.textContent = "";
+    const dialoguetext = `
         H-hey, cutie! ♡, I know you're excited to explore this part of the page...
         But you'll have to wait just a little longer!
         I'm still getting things ready, you know?
         It takes time! >_<
         You can wait for me, can't you? ♡
-        `
+        `;
+    let typed = 0;
+    typewriter(typed, dialoguetext);
+
     character.textContent = "|>·͙⁺˚•̩̩͙⁺ Jenny ⁺•̩̩͙˚⁺·͙໒꒱‧₊˚";
     ascii.textContent = `
 ⣿⣿⣿⡏⣸⣿⣿⣿⣿⣿⣿⢃⣾⢋⠃⡻⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣹⡟⢻⠿⢻⢹⡜⡰⠹⣼⣿⣿⣿⣿⣿⣿⣿⡆⢿⣿⣿⣆ 
@@ -84,7 +98,7 @@ async function visualnovelst() {
     color: #FF9EAD;
     text-shadow: 0 0 5px #FF9EAD55;
     transform: scale(0.7);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.7);
     position: absolute;
     right: 2rem;
     `;
