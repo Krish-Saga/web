@@ -2,6 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: var(--cursor-default);
+
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+:root {
+    --cursor-default: url("assets/images/Cursor.png") 2 2, auto;
+    --cursor-point: url("assets/images/pointer.png") 12 2, pointer;
+}
+
+#novel {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    transform: scale(2);
+    background-color: black;
+    z-index: 100000;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    cursor: var(--cursor-point);
 }
 
 #yummy:hover {
@@ -17,18 +39,15 @@
     z-index: 998;
     height: auto;
     transform: translate(10%, -50%);
+    cursor: var(--cursor-point);
 }
 
 #phone:hover {
-
     animation: corner-shake 0.3s linear infinite;
-
-
 }
 
 /* putting gif  */
 body {
-    font-family: 'Pixelify Sans', sans-serif;
     backdrop-filter: brightness(30%);
     position: relative;
     background-image: url("assets/images/spiderman.png");
@@ -36,6 +55,7 @@ body {
     width: 100vw;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
 
 }
 
@@ -106,7 +126,7 @@ header {
     z-index: 998;
     left: 0;
     padding: 30px;
-    margin: -10px;
+    margin: -50px;
 }
 
 #kakashi:hover {
@@ -116,6 +136,9 @@ header {
     content: url(assets/gif/kakashi-hatake.gif);
 }
 
+button>img {
+    cursor: var(--cursor-point);
+}
 
 .musicplayer {
     letter-spacing: 0.5px;
@@ -138,7 +161,7 @@ header {
 
 
 .musicplayer button {
-    cursor: pointer;
+    cursor: var(--cursor-point);
 }
 
 
@@ -297,6 +320,7 @@ a {
     font-size: 2rem;
     font-weight: 900;
     color: #F0F0F0;
+    cursor: var(--cursor-point);
 }
 
 a:hover {
@@ -305,7 +329,6 @@ a:hover {
 }
 
 #navbar {
-
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2),
         0 1px 3px rgba(0, 0, 0, 0.6),
         inset 0 1px 1px rgba(255, 255, 255, 0.12);

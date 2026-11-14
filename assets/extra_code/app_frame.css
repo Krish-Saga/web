@@ -29,7 +29,8 @@
 }
 
 #app_frame button {
-    cursor: pointer;
+
+    cursor: var(--cursor-point);
     background-position: center;
     transition: 0.4s ease-out;
     opacity: 0;
@@ -87,7 +88,7 @@
 
 #app_bar {
     overflow: hidden;
-    cursor: pointer;
+    cursor: var(--cursor-point);
     width: 100%;
     gap: 20px;
     height: 21px;
@@ -123,7 +124,7 @@
 }
 
 .app_bar_button img {
-
+    cursor: var(--cursor-point);
     background: transparent;
     width: 13px;
     height: 13px;

@@ -30,27 +30,91 @@ async function songdata() {
     }
 }
 async function visualnovelst() {
+    const ascii = document.createElement("pre");
     const dialoguescrn = document.createElement("div");
     const dialoguebox = document.createElement("div");
     const character = document.createElement("h1");
-    const dialogue = document.createElement("p");
-    dialogue.textContent = "Hello ! Anon UWU >_<.";
-    character.textContent = "Jenny";
+    const dialogue = document.createElement("pre");
+    const stbtn = document.getElementById("novel");
+    dialogue.textContent = `
+        H-hey, cutie! ♡, I know you're excited to explore this part of the page...
+        But you'll have to wait just a little longer!
+        I'm still getting things ready, you know?
+        It takes time! >_<
+        You can wait for me, can't you? ♡
+        `
+    character.textContent = "|>·͙⁺˚•̩̩͙⁺ Jenny ⁺•̩̩͙˚⁺·͙໒꒱‧₊˚";
+    ascii.textContent = `
+⣿⣿⣿⡏⣸⣿⣿⣿⣿⣿⣿⢃⣾⢋⠃⡻⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣹⡟⢻⠿⢻⢹⡜⡰⠹⣼⣿⣿⣿⣿⣿⣿⣿⡆⢿⣿⣿⣆ 
+⣿⣿⣿⢱⣿⣿⣿⣿⣿⣿⡟⣼⢏⡎⠰⢀⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠇⠰⡄⡄⢷⢡⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⡸⣿⣿⣿
+⣿⣿⡇⣼⣿⣿⣿⣿⣿⣿⢣⡏⣼⣿⣷⣾⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⣿⣿⣿⣿⡟⣿⣿⣿⣿⣶⣾⣾⣿⣿⣿⡜⣿⣿⣿⣿⣿⣿⣿⡇⢿⣿⣿
+⠻⠿⢁⣿⣿⣿⣿⣿⣿⡏⠘⣸⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿
+⣴⡆⢸⣿⣿⣿⣿⣿⣿⠃⢡⣿⣿⣿⣿⣿⣿⣿⢷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢻⣿⣿⣿⣿⣿⣿⣿⡄⣿⣿
+⣿⠇⣿⣿⣿⣿⣿⣿⣿⠀⣾⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⣿⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿
+⣿⢸⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⡿⢱⣿⣿⣿⣿⣿⣿⣿⡟⣸⣿⣿⣿⣿⣿⠇⠸⡿⠿⠿⠿⠿⠿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿
+⣿⣼⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⠏⣿⣿⡟⢠⣿⣿⣿⣿⣿⣿⠟⣰⣿⣿⣿⣿⣿⣿⣿⡿⢡⣿⣿⣿⠟⣋⡍⢰⣦⡘⣿⣿⡘⣿⣿⣷⣾⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣺⣿
+⡇⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⡿⠋⣠⣥⠂⠀⣶⣶⣦⣭⣙⠻⢋⣼⣿⣿⣿⣿⢡⣿⣿⡿⢡⣿⣿⣟⣱⣾⣿⢣⣿⣿⣷⡌⢿⣿⣌⢿⣿⣿⣿⣿⣿⡇⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⠇⣿⣿⣿⣿⣿⣿⣿⠀⠿⠋⢀⣼⠟⢡⠆⣼⣿⣿⣿⣿⠏⣰⣶⣿⣿⣿⢫⢇⣾⣿⠟⢡⣿⣿⣿⣿⣿⣿⡏⣾⣿⣿⣿⣿⣆⠻⣿⣦⡙⣌⢿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⡆⣿⣿⣿⣿⣿⣿⣿⢀⡴⢁⡾⢋⣴⠃⣼⣿⣿⣿⠟⡡⢰⣿⣿⣿⣿⢇⢎⣾⡿⢃⡞⣸⣿⣿⣿⣿⣿⠟⣼⣿⣿⠿⠿⢿⣿⣷⡈⢿⣿⣮⠢⠙⢿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⡷⣿⣿⣿⣿⣿⣿⣿⠈⡠⠋⣰⣿⠃⣼⣿⡿⠛⠡⠾⢡⣿⣿⣿⣿⠏⢀⠾⢋⣴⡿⢡⣿⣿⣿⣿⣿⠏⣴⠟⣫⠵⠾⠛⠋⠉⠁⠀⠀⠀⠉⠀⠀⠀⠁⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣧⣿⣿⣿⣿⣿⣿⣿⠀⣠⣾⠈⠁⠚⠋⠉⠀⠈⠉⠀⠀⠊⠙⠿⠃⠀⣠⣶⣿⣿⢣⣿⣿⣿⣿⡿⢁⣾⡧⠂⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣦⣤⡀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣇⣿⣿⣿⣿⣿⣿⣿⡆⡿⠛⠀⠀⢀⣠⣴⡶⠀⠀⠀⠀⠀⠀⠀⠡⣾⣿⣿⣿⢃⣾⣿⣿⡿⠋⣰⣿⣿⣷⣀⣴⡆⠀⠄⠀⣤⣄⢀⡙⠉⣿⣿⠇⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣇⠠⡀⠀⠰⣿⣿⣿⡇⠀⠀⠀⣴⣦⠀⠋⢰⣿⣿⣿⢃⣾⣿⣿⠋⣠⣾⣿⣿⣿⣿⣿⣿⣧⠀⣠⣦⠻⠟⢠⣽⠃⣿⡟⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢛⣿⢻⣿⣿⣿⣿⣿⣿⡄⢹⡄⠀⢻⣿⣿⣇⠠⣾⣧⣙⣋⣼⡇⢸⣿⣿⢃⣾⠟⠛⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠻⣿⠸⠿⠸⠟⣸⣿⢡⡠⠠⢣⣿⣿⣿⣿⣿⡟⣹⣿⢿⣿
+⡄⢹⡘⣿⣿⣿⣿⣿⣿⣷⠀⢻⣦⠀⠻⣿⣿⣦⠹⠇⠾⠿⢀⣃⣿⡿⢁⣈⠀⣠⣾⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣿⣦⣤⡿⠁⣠⣿⣿⣿⣿⣿⠟⣠⣿⣿⢸⣿
+⣼⢸⣇⢻⣿⣿⣿⣿⣿⣿⣧⡈⢿⣿⣷⣉⣿⣷⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣿⣿⡟⣻⠝⢀⣴⣿⣿⣿⣿⠟⣡⣾⣿⣿⡇⣬⣉
+⣿⡄⣿⡜⣿⣿⠻⣿⣿⣿⣿⣷⣌⠻⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣮⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡾⢋⣴⣿⣿⣿⠟⢋⣤⣾⣿⣿⣿⢸⠃⣿⣿
+⣿⣷⢹⣷⡘⢿⣷⣦⣝⡛⠿⣿⣿⣷⣌⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⣴⡿⠿⢛⣩⣴⠆⢸⣿⣿⣿⣿⡿⠸⢸⣿⣿
+⣉⡉⠘⣿⣿⣮⡻⢿⣿⣿⣷⡄⢨⠉⢛⠛⠂⠌⠙⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⢿⣿⣿⣿⣿⣏⣀⣬⣤⣶⣾⣿⣿⡟⢀⣿⣿⣿⣿⣿⡇⡁⣿⣿⣿
+⣿⣿⣧⢹⣿⣿⣿⣦⣍⠉⠛⠻⠦⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⢉⣽⣿⣾⣿⣿⣿⣿⣿⣿⣷⡄⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⣾⣿⣿⣿⣿⣿⠀⢸⣿⣿⣿
+⣿⣿⣿⡌⣿⣿⣿⣿⣿⡟⣷⠀⢸⣿⡆⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⢠⣿⣿⣿⣿⣿⡏⢀⣿⣿⣿⣿
+⣿⣿⣿⡇⢹⣿⣿⣿⣿⣇⢻⡄⢸⣿⣿⡄⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⡘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢣⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣴⠇⣾⣿⣿⣿⣿⡿⠀⣼⣿⣿⣿⣿
+⣿⣿⣿⡇⡄⢻⣿⣿⣿⣿⡘⡇⠸⣿⣿⣿⣦⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠻⢿⣿⣿⣿⣿⣿⣿⠟⣡⣾⣿⣿⣿⣿⣿⣿⣿⠟⢉⣴⣾⡟⣸⣿⣿⣿⣿⡿⢁⣾⣿⣿⣿⣿⣿
+⣿⣿⣿⡟⣿⠈⢻⣿⣿⣿⣷⠱⠀⣿⣿⣿⣿⣿⣦⣉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣛⣥⣾⣿⣿⣿⣿⣿⣿⠿⠋⠁⠄⠻⣿⡟⣰⣿⣿⣿⣿⡿⢁⣾⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣷⡏⣸⣆⠻⣿⣿⣿⣧⠀⠹⣿⣿⣿⣿⣿⣿⣿⣶⣬⣙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⢋⡀⡰⢂⡀⣶⣄⠋⣰⣿⣿⣿⣿⠟⣴⣿⣿⣿⣿⣿⣿⣿⠿
+⣿⣿⣿⠿⢃⣿⣿⣧⡘⢿⣿⣿⣧⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣬⡙⠻⢿⣿⣿⣿⣿⣿⣿⣿⠿⠋⠁⠀⠀⠀⣠⣶⣾⢡⡿⢃⣼⣿⣿⣿⠟⣡⣾⣿⣿⣿⣿⣿⣿⡟⠁⢀
+⣿⣿⡟⠀⣼⣿⣿⣿⣿⣦⡙⢿⣿⣷⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠆⠈⠙⠿⠿⠛⠉⡠⠄⠀⣠⣴⣶⣾⣿⣿⡿⠈⣠⣿⣿⡿⢋⣡⣾⣿⣿⣿⣿⣿⣿⡿⠃⠀⠐⢋
+⡿⠜⠀⣰⣿⣿⣿⣿⣿⣿⣿⣦⣝⠻⢿⣦⠹⣿⣿⣿⡿⢩⣍⡛⣿⣿⣿⣿⡇⢚⡀⠀⠀⠀⠁⠔⢠⣾⣿⣿⣿⣿⣿⣿⣉⣐⠛⠛⢉⣥⣶⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⢠⣾⣿
+⠁⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣬⣁⣈⣻⡟⠠⢿⡟⣰⣿⣿⣿⣿⣿⣆⢳⣤⣄⠻⠁⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠉⠻⠛⠻⢿⣿⣿⠿⠋⠀⠀⠀⢀⣾⣿⣿
+⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣿⣿⣿⣿⣿⣿⣿⡀⠿⠿⠁⠄⠿⠿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠈⠠⠄⠀⠀⠀⠀⠀⣼⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠇⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⢶⡆⠀⢰⠸⠖⢈⣿⣿⣿⠿⠛⠁⣠⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿
+    `
+    let novelst = true;
+    ascii.style.cssText = `
+    color: #FF9EAD;
+    text-shadow: 0 0 5px #FF9EAD55;
+    transform: scale(0.7);
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    right: 2rem;
+    `;
+    stbtn.onclick = () => {
+        if (novelst) {
+            dialoguebox.remove();
+            dialoguescrn.remove();
+            document.body.style.overflow = "";
+            novelst = false;
+            console.log("band")
+        } else {
+            visualnovelst();
+            console.log("chalu")
+            novelst = true;
+        }
+    }
     character.style.cssText = `
-    font-family: 'Pixelify Sans', sans-serif;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
-    --webkit-text-stroke: 1px black;
     position:absolute;
     top: -2rem;
     left: 4rem;
+    color: #FFE8E3;
    `;
     dialogue.style.cssText = `
-    padding: 60px 100px;
-    font-family: 'Pixelify Sans', sans-serif;
-    color: white;
-    font-size: 2.6rem;
+    padding: 20px 100px;
+    color: #FF9EAD;
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 2px red;
     `;
     dialoguescrn.style.cssText = `
         position: fixed;
@@ -71,15 +135,11 @@ async function visualnovelst() {
     bottom: 0;
     `
     document.body.style.overflow = "hidden";
-    dialoguescrn.appendChild(dialoguebox)
+    dialoguescrn.append(ascii, dialoguebox)
     dialoguebox.append(character, dialogue);
     document.documentElement.appendChild(dialoguescrn);
-}
-async function visualnovelend() {
-    dialoguebox.remove();
-    dialoguescrn.remove();
-    document.body.style.overflow = "";
 
+    document.documentElement.appendChild(stbtn);
 }
 
 async function playsong(index, sdata) {
@@ -141,7 +201,6 @@ async function imgdata() {
 
 // ================= Main Function 
 async function main() {
-    await visualnovelst();
     var songindex = 0;
     var imgindex = 0;
     const sdata = await songdata();
