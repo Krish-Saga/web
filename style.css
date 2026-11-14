@@ -131,7 +131,7 @@ header {
 
 #kakashi:hover {
     border-radius: 100%;
-    box-shadow: 8px 10px 10px #880808, inset 8px 10px 10px #B8FCFF;
+    box-shadow: 8px 10px 10px 5px #880808, inset 8px 10px 10px #B8FCFF;
 
     content: url(assets/gif/kakashi-hatake.gif);
 }
@@ -139,6 +139,10 @@ header {
 button,
 button>img {
     cursor: var(--cursor-point);
+}
+
+button:hover {
+    filter: brightness(80%);
 }
 
 .musicplayer {
@@ -196,9 +200,10 @@ button>img {
     border: 2px solid white;
     height: 48px;
     border-radius: 30%;
-    box-shadow: -5px -4px 10px black,
+    box-shadow: -5px -4px 10px red,
         inset -4px -4px 5px black;
 }
+
 
 
 .ctrl-icons {

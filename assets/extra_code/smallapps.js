@@ -274,7 +274,12 @@ async function main() {
 
     })
     kakashi.addEventListener("mouseleave", () => {
-        appimg.src = "assets/pfp/me.gif";
+        if (!song.paused) {
+            appimg.src = encodeURI("assets/" + sdata.music[songindex].gif);
+        } else {
+            appimg.src = "assets/pfp/me.gif";
+        }
+
     })
 
 }
