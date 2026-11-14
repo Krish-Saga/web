@@ -170,14 +170,14 @@ async function playsong(index, sdata) {
 
     subtrack.mode = 'hidden';
 
-    await subtrack.addEventListener("cuechange", () => {
-        const activeCue = subtrack.activeCues?.[0];
-        if (activeCue) {
-            subtitle.replaceChildren(activeCue.getCueAsHTML());
-        } else {
-            subtitle.replaceChildren();
-        }
-    })
+    // await subtrack.addEventListener("cuechange", () => {
+    //     const activeCue = subtrack.activeCues?.[0];
+    //     if (activeCue) {
+    //         subtitle.replaceChildren(activeCue.getCueAsHTML());
+    //     } else {
+    //         subtitle.replaceChildren();
+    //     }
+    // })
 
     if (song.paused) {
         song.play();

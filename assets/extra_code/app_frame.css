@@ -32,13 +32,17 @@
 
     cursor: var(--cursor-point);
     background-position: center;
-    transition: 0.4s ease-out;
+    transition: 0.2s linear;
     opacity: 0;
 }
 
 #app_frame:hover button {
-
     opacity: 1;
+}
+
+#app_frame button:active {
+    filter: brightness(60%);
+
 }
 
 
@@ -119,6 +123,11 @@
     white-space: nowrap;
     overflow: hidden;
 
+
+}
+
+.app_bar_button img:hover {
+    filter: brightness(80%);
 
 }
 
