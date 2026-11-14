@@ -17,6 +17,8 @@ const subtrack = document.getElementById("caption-track").track;
 const subtitle = document.querySelector("#sub-display p");
 const kakashi = document.getElementById("kakashi");
 const dialogue = document.createElement("pre");
+const typingsound = new Audio("assets/music/dialogue.mp3")
+let stoptyping = false;
 
 
 async function songdata() {
@@ -31,15 +33,20 @@ async function songdata() {
     }
 }
 function typewriter(typed, dialoguetext) {
+    if (stoptyping) { return };
+
     if (typed < dialoguetext.length) {
         dialogue.textContent += dialoguetext[typed];
+        typingsound.play();
+        console.log(typingsound.currentTime);
         typed++;
         setTimeout(() => {
             typewriter(typed, dialoguetext)
         }, 50);
-
     }
+
 }
+
 async function visualnovelst() {
 
     const uwu = new Audio("assets/music/uwu_onichan.mp3")
@@ -59,7 +66,6 @@ async function visualnovelst() {
         `;
     let typed = 0;
     typewriter(typed, dialoguetext);
-
     character.textContent = "|>·͙⁺˚•̩̩͙⁺ Jenny ⁺•̩̩͙˚⁺·͙໒꒱‧₊˚";
     ascii.textContent = `
 ⣿⣿⣿⡏⣸⣿⣿⣿⣿⣿⣿⢃⣾⢋⠃⡻⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣹⡟⢻⠿⢻⢹⡜⡰⠹⣼⣿⣿⣿⣿⣿⣿⣿⡆⢿⣿⣿⣆ 
@@ -109,12 +115,13 @@ async function visualnovelst() {
         if (novelst) {
             dialoguebox.remove();
             dialoguescrn.remove();
+            stoptyping = !stoptyping;
+            typingsound.pause()
             document.body.style.overflow = "";
             novelst = false;
-            console.log("band")
         } else {
+            stoptyping = !stoptyping;
             visualnovelst();
-            console.log("chalu")
             novelst = true;
         }
     }

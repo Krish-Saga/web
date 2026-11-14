@@ -136,6 +136,7 @@ header {
     content: url(assets/gif/kakashi-hatake.gif);
 }
 
+button,
 button>img {
     cursor: var(--cursor-point);
 }
