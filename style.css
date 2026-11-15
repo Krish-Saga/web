@@ -29,7 +29,7 @@
 
 .dancing-word {
     display: inline-block;
-    animation: dance 1s ease-in-out infinite,
+    animation: dance 0.8s ease-in-out infinite,
         rgb 3s linear infinite;
     animation-delay: calc(var(--i)* 0.1s);
 
@@ -411,7 +411,6 @@ button:hover {
 #b2 p {
     letter-spacing: 2px;
     font-weight: 400;
-    background-color: black;
     font-size: 2em;
 }
 
@@ -465,7 +464,6 @@ button:hover {
     width: 70%;
     border: 2px solid white;
     align-items: center;
-    letter-spacing: 3px;
 
     border-radius: 5px;
 
