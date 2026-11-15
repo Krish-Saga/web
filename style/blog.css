@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: var(--cursor-default);
+}
+
+:root {
+    font-family: 'Caveat ', cursive;
+    --cursor-default: url("../assets/images/Cursor.png") 2 2, auto;
+    --cursor-point: url("../assets/images/pointer.png") 12 2, pointer;
+    font-size: 13px;
+}
+
+body {
+    background-image: url("../assets/images/blog.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.background_video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    height: 400px;
+}
+
+a {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: brightness(50%);
+    align-items: center;
+    left: 15%;
+    top: 4rem;
+    font-size: 2rem;
+    background: none;
+    padding: 0.7rem;
+    box-shadow: 0 2px 0 3px white, 0 4px 0 6px black;
+
+
+    cursor: var(--cursor-point);
+}
+
+a img {
+
+    cursor: var(--cursor-point);
+
+}
+
+
+a:active {
+    transform: translateY(4px);
+
+    box-shadow: 0 1px 0 2px white, 0 2px 0 4px black;
+}

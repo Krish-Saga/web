@@ -16,8 +16,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    min-height: 100vh;
     background-image: url("../assets/images/project.gif");
     background-attachment: fixed;
     background-size: cover;
