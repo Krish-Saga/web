@@ -13,6 +13,10 @@
     font-size: 13px;
 }
 
+pre {
+    font-family: inherit;
+}
+
 #stickers {
     position: relative;
     image-rendering: pixelated;

@@ -6,7 +6,7 @@
 }
 
 :root {
-    font-family: 'Caveat ', cursive;
+    font-family: 'Caveat', cursive;
     --cursor-default: url("../assets/images/Cursor.png") 2 2, auto;
     --cursor-point: url("../assets/images/pointer.png") 12 2, pointer;
     font-size: 13px;
