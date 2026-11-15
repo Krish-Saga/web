@@ -1,15 +1,52 @@
+html {
+    font-size: 13px;
+}
+
+
 * {
+    font-family: 'Pixelify Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     cursor: var(--cursor-default);
 
-    font-family: 'Pixelify Sans', sans-serif;
 }
 
 :root {
     --cursor-default: url("assets/images/Cursor.png") 2 2, auto;
     --cursor-point: url("assets/images/pointer.png") 12 2, pointer;
+}
+
+#stickers {
+    position: relative;
+    image-rendering: pixelated;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    justify-content: center;
+}
+
+.float {
+    animation: floating 1.5s ease-in-out infinite;
+}
+
+
+.float-2 {
+    animation-delay: -1.5s;
+    animation-delay: -0.8s;
+}
+
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
 }
 
 #novel {
@@ -121,13 +158,11 @@ header {
 }
 
 #kakashi {
+    top: 50%;
     position: absolute;
-    top: 0;
-    transform: translate(-75%, 0);
+    right: -16rem;
     z-index: 998;
-    left: 0;
     padding: 30px;
-    margin: -50px;
 }
 
 #kakashi:hover {
@@ -263,13 +298,6 @@ button:hover {
 
 }
 
-main {
-    justify-content: center;
-    display: flex;
-
-
-
-}
 
 
 #b2 {
@@ -279,10 +307,48 @@ main {
     flex-direction: column;
     gap: 30px;
     padding: 30px;
-    font-weight: 900;
-    font-size: 2rem;
+    font-weight: 400;
+    font-style: normal;
     flex: 1;
+    text-align: center;
+    line-height: 1.9;
+    text-wrap: balance;
+
     background: url(assets/images/star.gif);
+}
+
+#b2 p {
+    font-size: 1.8rem;
+}
+
+#b2 h2 {
+    font-size: 3em;
+}
+
+#running_tiger {
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+#running_tiger img {
+    position: absolute;
+    top: 50%;
+    animation: run 8s linear infinite;
+}
+
+@keyframes run {
+    from {
+        left: 100%;
+        transform: translate(0, -50%);
+    }
+
+    to {
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+
 }
 
 #main-head img {
@@ -295,11 +361,12 @@ main {
 }
 
 .main-content {
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     position: relative;
     color: antiquewhite;
-    height: 80vh;
+    height: fit-content;
     width: 70%;
     border: 2px solid white;
     align-items: center;
