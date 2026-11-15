@@ -1,10 +1,4 @@
-html {
-    font-size: 13px;
-}
-
-
 * {
-    font-family: 'Pixelify Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,8 +7,10 @@ html {
 }
 
 :root {
+    font-family: 'Pixelify Sans', sans-serif;
     --cursor-default: url("assets/images/Cursor.png") 2 2, auto;
     --cursor-point: url("assets/images/pointer.png") 12 2, pointer;
+    font-size: 13px;
 }
 
 #stickers {
@@ -29,6 +25,50 @@ html {
 
 .float {
     animation: floating 1.5s ease-in-out infinite;
+}
+
+.dancing-word {
+    display: inline-block;
+    animation: dance 1s ease-in-out infinite,
+        rgb 3s linear infinite;
+    animation-delay: calc(var(--i)* 0.1s);
+
+}
+
+@keyframes rgb {
+
+    0%,
+    100% {
+        color: red;
+    }
+
+    33% {
+        color: green;
+    }
+
+    66% {
+        color: blue;
+    }
+
+}
+
+@keyframes dance {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+#intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
 }
 
 
@@ -185,10 +225,10 @@ button:hover {
     letter-spacing: 0.5px;
     padding: 20px;
     transform: rotate(9deg);
-    box-shadow: 20px 20px 10px black,
-        inset 10px 13px 30px black;
+    box-shadow: 0 2px 0 4px white,
+        0 6px 0px 6px black;
     color: #FFFBF1;
-    border: 2px solid white;
+
     align-content: center;
     display: inline-block;
     position: relative;
@@ -284,6 +324,11 @@ button:hover {
 
 }
 
+#main-head h1 {
+    font-weight: 400;
+    font-size: 2em;
+}
+
 .meallthetime {
     width: 40px;
     height: 40px;
@@ -301,24 +346,23 @@ button:hover {
 
 
 #b2 {
-    line-height: 1.2;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 30px;
     font-weight: 400;
-    font-style: normal;
     flex: 1;
     text-align: center;
-    line-height: 1.9;
     text-wrap: balance;
 
     background: url(assets/images/star.gif);
 }
 
 #b2 p {
-    font-size: 1.8rem;
+    font-weight: 400;
+    background-color: black;
+    font-size: 2em;
 }
 
 #b2 h2 {
@@ -359,6 +403,7 @@ button:hover {
     left: 0;
     padding-left: 20px;
 }
+
 
 .main-content {
     margin: 2rem;

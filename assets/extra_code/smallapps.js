@@ -36,13 +36,16 @@ function typewriter(typed, dialoguetext) {
     if (stoptyping) { return };
 
     if (typed < dialoguetext.length) {
-        dialogue.textContent += dialoguetext[typed];
+        console.log(dialogue.textContent += dialoguetext[typed]);
         typingsound.play();
-        console.log(typingsound.currentTime);
         typed++;
         setTimeout(() => {
             typewriter(typed, dialoguetext)
         }, 50);
+    } else {
+
+        console.log("function ends")
+        typingsound.pause()
     }
 
 }
