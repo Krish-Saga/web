@@ -54,7 +54,7 @@ And yeah, it's still in its early days.
 2. You can move the image. There'll be something cool related to it in future updates.
 3. Try hovering over everything!
 4. Make sure to click every button. Some of them might not work yet because I'll add their functionality in future updates.
-
+5. Make sure to check out all image in app like window in website 
 I've thought of a lot more Easter eggs that I'll add in future updates. I'll update this section as soon as I implement them.
 
 ## License
@@ -112,3 +112,24 @@ Here's a look at how the website has changed over time. You can compare the prev
 ### Base 6
 
 ![Base6](assets/Update_Images/Base6.png)
+### Base 7
+- Home
+![Base7](assets/Update_Images/Base7.png)
+
+- Novel
+
+![Base7-N](assets/Update_Images/Base7-N.png)
+
+- Projects
+![Base7-2](assets/Update_Images/Base7-2.png)
+
+- About
+![Base7-3](assets/Update_Images/Base7-3.png)
+
+- Blog
+![Base7-4](assets/Update_Images/Base7-4.png)
+
+
+
+
+
