@@ -33,23 +33,72 @@
         rgb 3s linear infinite;
     animation-delay: calc(var(--i)* 0.1s);
 
+
 }
+
 
 @keyframes rgb {
 
     0%,
     100% {
-        color: red;
+        color: #E0218A;
     }
 
-    33% {
-        color: green;
+    7% {
+        color: #FF1493;
     }
 
-    66% {
-        color: blue;
+    14% {
+        color: #FF1E56;
     }
 
+    21% {
+        color: #FF0033;
+    }
+
+    28% {
+        color: #FF4500;
+    }
+
+    35% {
+        color: #FFA500;
+    }
+
+    42% {
+        color: #FFD700;
+    }
+
+    49% {
+        color: #FFFF00;
+    }
+
+    56% {
+        color: #ADFF2F;
+    }
+
+    63% {
+        color: #39FF14;
+    }
+
+    70% {
+        color: #40E0D0;
+    }
+
+    77% {
+        color: #00FFFF;
+    }
+
+    84% {
+        color: #5B9BD5;
+    }
+
+    90% {
+        color: #0066FF;
+    }
+
+    95% {
+        color: #1B1BFF;
+    }
 }
 
 @keyframes dance {
@@ -360,6 +409,7 @@ button:hover {
 }
 
 #b2 p {
+    letter-spacing: 2px;
     font-weight: 400;
     background-color: black;
     font-size: 2em;
