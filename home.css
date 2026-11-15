@@ -114,10 +114,7 @@
 }
 
 #intro {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-
+    display: block;
 }
 
 
@@ -139,6 +136,7 @@
 }
 
 #novel {
+    font-family: 'Pixelify Sans', sans-serif;
     position: absolute;
     top: 2rem;
     left: 3rem;

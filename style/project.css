@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: var(--cursor-default);
+}
+
+:root {
+    font-family: 'Pixelify Sans', sans-serif;
+    --cursor-default: url("../assets/images/Cursor.png") 2 2, auto;
+    --cursor-point: url("../assets/images/pointer.png") 12 2, pointer;
+    font-size: 13px;
+}
+
+body {
+
+    min-height: 100vh;
+    background-image: url("../assets/images/project.gif");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

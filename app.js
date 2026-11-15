@@ -1,7 +1,7 @@
 const boxbar = document.getElementById("app_bar");
 const box = document.getElementById("app_frame");
 const para = document.getElementById("intro")
-const words = para.textContent.split(" ");
+const words = para.textContent.trim().split(/\s+/);
 let offsetX = 0,
     offsetY = 0,
     mouseX = 0,
