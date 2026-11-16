@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     cursor: var(--cursor-default);
+    image-rendering: pixelated;
 
 }
 

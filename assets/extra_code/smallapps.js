@@ -55,11 +55,20 @@ async function visualnovelst() {
     const uwu = new Audio("assets/music/uwu.mp3")
     uwu.play();
     const ascii = document.createElement("pre");
+    const courageMe = document.createElement("img")
     const dialoguescrn = document.createElement("div");
     const dialoguebox = document.createElement("div");
     const character = document.createElement("h1");
     const stbtn = document.getElementById("novel");
+    const kitte = document.createElement("img");
+    kitte.src = "assets/gif/cute-cat-white.gif";
+    const dialoguecharacters = document.createElement("div");
     dialogue.textContent = "";
+    courageMe.src = "assets/gif/courage2.gif";
+
+    courageMe.style.height = "200px";
+
+    courageMe.style.width = "auto";
     const dialoguetext = `
         H-hey, cutie! ♡, I know you're excited to explore this part of the page...
         But you'll have to wait just a little longer!
@@ -111,8 +120,6 @@ async function visualnovelst() {
     text-shadow: 0 0 5px #FF9EAD55;
     transform: scale(0.7);
     background: rgba(0,0,0,0.7);
-    position: absolute;
-    right: 2rem;
     `;
     stbtn.onclick = () => {
         if (novelst) {
@@ -128,20 +135,30 @@ async function visualnovelst() {
             novelst = true;
         }
     }
+    dialoguecharacters.style.cssText = `
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    height: 500px;
+    width: 80vw;
+    `
     character.style.cssText = `
-    color: white;
     font-size: 3rem;
     font-weight: 400;
     position:absolute;
-    top: -2rem;
+    top: -4rem;
     left: 4rem;
-    color: #FFE8E3;
+    color: skyblue;
    `;
     dialogue.style.cssText = `
-    padding: 20px 100px;
-    color: #FF9EAD;
-    font-size: 1.7rem;
+    overflow: hidden;
+    height: 100%
+    margin: 1rem 2rem;
+    color: aqua;
+    font-size: 1.8rem;
+    align-items: center;
     text-shadow: 2px 2px 2px red;
+    text-wrap: balance;
     `;
     dialoguescrn.style.cssText = `
         position: fixed;
@@ -150,20 +167,28 @@ async function visualnovelst() {
         height: 100vh;
         backdrop-filter: blur(5px);
         z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: centers;
     `;
+    kitte.style.cssText = `
+    position: absolute;
+    right: 2rem;
+    top: -10%;
+    `
     dialoguebox.style.cssText = `
     z-index: 10000;
     width: 100vw;
-    height: 200px;
+    height: 150px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     position: absolute;
-    box-shadow: inset 0px 20px 20px black;
     bottom: 0;
     `
     document.body.style.overflow = "hidden";
-    dialoguescrn.append(ascii, dialoguebox)
-    dialoguebox.append(character, dialogue);
+    dialoguecharacters.append(courageMe, ascii);
+    dialoguescrn.append(dialoguecharacters, dialoguebox)
+    dialoguebox.append(character, dialogue, kitte);
     document.documentElement.appendChild(dialoguescrn);
 
     document.documentElement.appendChild(stbtn);
